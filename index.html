@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Orchestrator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar placeholder -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Agents</h2>
+                <button class="new-chat-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="icon"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    New Goal
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <div class="history-item active">Current Session</div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <h1>AI Agent Orchestrator</h1>
+            </header>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant intro-message">
+                    <div class="message-content">
+                        <strong>Hello!</strong> I am your AI Agent Orchestrator. Provide me with a complex goal and I will break it down into steps and execute them.
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-box">
+                    <textarea id="goalInput" placeholder="Send a goal to the orchestrator..." rows="1" autofocus></textarea>
+                    <button id="sendBtn" class="send-btn" disabled>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </button>
+                </div>
+                <div class="input-footer">AI can make mistakes. Consider verifying important information.</div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Include Marked for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
